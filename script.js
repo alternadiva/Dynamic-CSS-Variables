@@ -45,11 +45,42 @@ function testLogin() {
         }
         
     }
+    else {
+        if (username.value !== testUsername && password.value !== testUsername) {
+            username.style.background = "var(--incorrect-background)";
+            username.value = "";
+            password.style.background = "var(--incorrect-background)";
+            password.value = "";
+            warning.innerText = "Incorrect User ID and Password";
+            warning.style.background = "var(--incorrect-background)";
+        }
+        else if (username.value !== testUsername) {
+            username.style.background = "var(--incorrect-background)";
+            username.value = "";
+            warning.innerText = "Incorrect User ID"
+            warning.style.background = "var(--incorrect-background)";
+            password.style.background = "var(--default-background)";
+        }
+        else {
+            password.style.background = "var(--incorrect-background)";
+            password.value = "";
+            warning.innerText = "Incorrect Password"
+            warning.style.background = "var(--incorrect-background)";
+            username.style.background = "var(--default-background)";
+        }
+    }
 }
 
+// Reset inputs and style
 
 function resetLogin() {
+    username.value = "";
+    password.value = "";
+    warning.innerText = "";
 
+    warning.style.background = "var(--default-background)";
+    username.style.background = "var(--default-background)";
+    password.style.background = "var(--default-background)";
 }
 
 // Event listeners

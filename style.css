@@ -2,4 +2,5 @@
   --default-background: rgb(255, 255, 255);
   --correct-background: rgb(214, 253, 214);
   --space-background: rgb(255, 255, 202);
+  --incorrect-background: rgb(255, 184, 184);
 }
