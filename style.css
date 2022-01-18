@@ -1,4 +1,5 @@
 :root {
   --default-background: rgb(255, 255, 255);
-  --correct-background: rgb(164, 255, 164);
+  --correct-background: rgb(214, 253, 214);
+  --space-background: rgb(255, 255, 202);
 }
